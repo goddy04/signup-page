@@ -1,0 +1,83 @@
+* {
+    font-family: 'Poppins', sans-serif;
+  }
+.table-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
+    width: 50%;
+  }
+
+  
+  h2 {
+    margin-bottom: 20px;
+    /* text-align: center; */
+    color: #333;
+  }
+  
+  .program-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .program-table th,
+  .program-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .program-table th {
+    background-color: #4c77af; /* Green */
+    color: white;
+  }
+  
+  .program-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination-button {
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #4c77af; /* Green */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination-button:hover {
+    background-color: #4c77af; /* Darker green */
+  }
+  
+  .pagination-button.active {
+    background-color: #7f7f7f;
+  }
+
+  .search-bar {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .draft-status {
+    color: rgb(255, 105, 105); /* Example: Red text for Draft */
+    font-weight: bold;
+    font-size: 15x;
+  }
+  
+  .live-status {
+    color: rgb(35, 183, 35); /* Example: Green text for Live */
+    font-weight: bold;
+    font-size: 15x;
+  }
