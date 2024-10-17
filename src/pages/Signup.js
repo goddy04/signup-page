@@ -6,6 +6,7 @@ import "primeicons/primeicons.css"; // Icons
 import { Password } from "primereact/password";
 import { Dropdown } from "primereact/dropdown";
 import "./Signup.css";
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   // State to hold form data
@@ -16,20 +17,22 @@ const Signup = () => {
   const [touchedEmail, setTouchedEmail] = useState(false); // Track if the email field has been touched
   const [touchedPassword, setTouchedPassword] = useState(false); // Track if the password field has been touched
   const [selectedCollege, setSelectedCollege] = useState(null);
+  const navigate = useNavigate();
 
   const colleges = [
     { name: "Rajalakshmi Institute of Technology", code: "RIT" },
     { name: "Rajalakshmi Engineering College", code: "REC" },
     { name: "Chennai Insititute of Technology", code: "CIT" },
   ];
+
   const validateEmail = (email) => {
-    let regex_email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const regex_email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex_email.test(email);
   };
 
   // Function to validate password strength
   const validatePassword = (password) => {
-    let regex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
+    const regex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
     return regex.test(password);
   };
 
@@ -52,7 +55,7 @@ const Signup = () => {
     }
     if (validateEmail(email) && validatePassword(password)) {
       // You can add the API call to submit form data here
-      console.log("Form Data Submitted:", { email, password, selectedCollege });
+      navigate('/dashboard');
     }
   };
 
